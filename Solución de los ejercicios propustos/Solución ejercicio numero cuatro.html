@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio numero cuatro</title>
+
+    <style>
+        body{
+            background-color: rgb(124, 124, 124);
+            color: black;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: oblique;
+
+        }
+
+        table{ 
+        border: 2px solid;
+        border-color: rgb(0, 0, 0);
+          width: 700px;
+          border-collapse: collapse;
+       }
+
+    </style>
+
+</head>
+
+<body>
+  <center> <h1> Ejercicio Numero cuatro</h1> </center> 
+
+
+
+   <center>
+       <br>
+       <br>
+   <center><table border="3">
+        <th>Nombre</th>  <th>Apellido</th> <th>Nota1</th>  <th>Nota2</th>   <th>Nota3</th> <th>Nota final</th> </center> 
+        <tbody id="cuerpo">
+
+        </tbody>
+    </table></center> 
+
+<script>
+ var salida="";
+ aumento=1;
+ valor = prompt( "Nombre del estudiante", " ");
+ valor1 = prompt( "apellidos del estudiante", " ");
+ valor2 = prompt( "Ingrese la nota 1", " ");
+ valor3 = prompt( "Ingrese la nota 2", " ");
+ valor4 = prompt( "Ingrese la nota 3", " ");
+ prom1= parseInt(valor2) + parseInt(valor3) + parseInt(valor4); 
+ promedio2= parseInt(prom1) / 3;
+while(aumento=0 ){
+    aumento++
+}
+ 
+ salida+='<tr><td>' +valor+ '</td><td>'+ valor1+'</td> <td>' + valor2 + "</td> <td>"+ valor3 +"</td> <td>"+ valor4 +"</td> <td>"+ promedio2 +"</td> </tr>";
+
+
+ document.getElementById('cuerpo').innerHTML= salida;   
+
+
+
+</script>
+
+<script>
+
+
+
+    
+</script>
+
+
+
+
+   </center> 
+</body>
+</html>

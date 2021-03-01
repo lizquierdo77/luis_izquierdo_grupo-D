@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solución del ejercicio dos</title>
+
+    <style>
+
+        body{
+            background-color: aqua;
+            color: black;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: oblique;
+            font-size: color black ;
+        }
+      table{ 
+        border: 2px solid;
+        border-color: blue;
+          width: 400px;
+          border-collapse: collapse;
+       }
+        
+        .cuerpo td, tr {
+            border: 2px solid;
+            text-align: center;
+            border-color: blue;
+        }
+    </style>
+
+</head>
+<body>
+    <center>
+        <h1> Ejercicio Numero dos</h1>
+
+        <table border="3">
+            <th>Números</th>  <th>Valor Letra español</th>   <th>Valor Letra ingles</th>
+            <tbody id="cuerpo">
+
+            </tbody>
+        </table>
+
+        
+        <script>
+var entra="";
+var valor;
+valor = prompt( "Ingrese un número entre uno y veinte", " ");
+
+for(var iv=1; iv <= valor; iv++  ){
+    entra+='<tr><td>' +iv+ '</td><td>'+ letras (iv)+'</td> <td>' + ingles (iv)+ "</td> </tr>";
+
+}
+ document.getElementById('cuerpo').innerHTML=entra;   
+
+
+function letras(num){
+                    switch (num){
+                        case 0:letra='CERO'; break;
+                        case 1:letra='UNO'; break;
+                        case 2:letra='DOS'; break;
+                        case 3:letra='TRES'; break;
+                        case 4:letra='CUATRO'; break;
+                        case 5:letra='CINCO'; break;
+                        case 6:letra='SEIS'; break;
+                        case 7:letra='SIETE'; break;
+                        case 8:letra='OCHO'; break;
+                        case 9:letra='NUEVE'; break;
+                        case 10:letra='DIEZ'; break;
+                        case 11:letra='ONCE'; break;
+                        case 12:letra='DOCE'; break;
+                        case 13:letra='TRECE'; break;
+                        case 14:letra='CATORCE'; break;
+                        case 15:letra='QUINCE'; break;
+                        case 16:letra='DIECISEIS'; break;
+                        case 17:letra='DIECISIETE'; break;
+                        case 18:letra='DIECIOCHO'; break;
+                        case 19:letra='DIECINUEVE'; break;
+                        case 20:letra='VEINTE'; break;
+                    }
+                      return letra;
+                }
+              
+              
+function ingles(num){
+                    switch (num){
+                case 1:letra='ONE'; break; 
+                case 2:letra='TWO'; break;
+                case 3:letra='THREE'; break;
+                case 4:letra='FOUR'; break;
+                case 5:letra='FIVE'; break;
+                case 6:letra='SIX'; break;
+                case 7:letra='SEVEN'; break;
+                case 8:letra='EIGHT'; break;
+                case 9:letra='NINE'; break;
+                case 10:letra='TEN'; break;
+                case 11:letra='ELEVEN'; break;
+                case 12:letra='TWELVE'; break;
+                case 13:letra='THIRTEEN'; break;
+                case 14:letra='FOURTEEN'; break;
+                case 15:letra='FIFTEEN'; break;
+                case 16:letra='SIXTEEN'; break;
+                case 17:letra='SEVENTEEN'; break;
+                case 18:letra='EIGHTEEN'; break;
+                case 19:letra='NINETEEN'; break;
+                case 20:letra='TWENTY'; break;
+            
+                    }
+
+                    return letra;
+}
+
+
+
+        </script>
+
+
+
+
+    </center>
+</body>
+</html>

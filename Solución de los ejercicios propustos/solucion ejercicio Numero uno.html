@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solución ejercicio numero uno </title>
+
+    <style>
+        body{
+            background-color: aqua;
+            color: black;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: oblique;
+            .entrada: float: left;
+        }
+    </style>
+</head>
+<body>
+    <center>
+
+<h1> Ejercicio Numero uno</h1>
+
+<script>
+var entrada="";
+var entrada1="";    
+var entrada2="";    
+var entrada3="";
+var suma=0;
+let i;
+var contPar=0;  
+var contImp=0;
+var valor;
+var iiv=0;
+
+
+valor = prompt( "Ingrese un número", " ");
+
+for( iv=1;  iv <=valor; iv++){
+    document.write( iv + "<br>");
+    suma+=iv;
+
+    if(iv%2==0){
+     contPar++;
+       }
+       
+  else{
+          contImp++; 
+                    }
+                   
+}
+
+for (i=1; i<=50; i++){
+    if(i%5==0){
+document.write( " Multiplos de cinco = " + i + "<br>", "<br>" );
+    } 
+}
+
+entrada+=" suma de numeros = "  +  suma ; "<br>"
+
+entrada1+=" cantidad de numeros pares = " + contPar;  "<br>" 
+entrada2+=" cantidad de numeros impares = " +contImp ;
+
+
+
+document.write(entrada +  "<br>",  "<br>"  );
+
+document.write(entrada1 +  "<br>", "<br>"  );
+
+document.write(entrada2 + "<br>", "<br>"   );
+
+
+
+
+</script> 
+
+
+
+    </center>
+</body>
+</html>

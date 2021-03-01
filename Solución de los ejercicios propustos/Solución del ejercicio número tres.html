@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>solución del ejercicio numero tres </title>
+
+    <style>
+        body{
+            background-color: rgb(144, 179, 245);
+            color: black;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: oblique;
+
+        }
+
+        table{ 
+        border: 2px solid;
+        border-color: rgb(0, 0, 0);
+          width: 300px;
+          border-collapse: collapse;
+       }
+
+    </style>
+</head>
+<body>
+    <center>
+        <h1> Ejercicio Numero tres</h1>
+
+    </center>
+    <br>
+   <center>  <label> Digite una serie de números uno por uno  </label>
+    <input name="num" type="text" id="numero" 
+    placeholder="Digita cero para finalizar" 
+    autofocus onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
+
+    <button id="act" onclick="guardar()"> OK </button> </center>
+</div>
+<Center>
+    <br>
+<table border="1" >
+    <th>Numeros digitados</th>
+    <tbody id="ver">
+
+    </tbody>
+</table>
+    <br>
+  <table border="1">
+                <th>Cantidad de numeros</th><tbody id="cant"></tbody>
+            
+               <th>Sumatoria total</th> <tbody id="suma"></tbody>
+            
+                <th>Promedio </th><tbody id="prom"></tbody>
+            </table>
+</center>
+
+        <script>
+ 
+ var num = [];
+    
+    function guardar() {
+    
+        var n = document.getElementById('numero').value;
+        if (n == 0) {
+            resultado()
+            ocultar()
+        }
+        num.push(n);
+        document.getElementById('numero').value = "";
+    }
+    
+    function resultado() {
+        var result = "";
+        var i = 0;
+        var par = 0;
+        var impar = 0;
+        var sum = 0;
+        
+    
+        while (i < num.length) {
+            result += "<tr><td>" + num[i] + "</td></tr>";
+            sum = sum + parseInt(num[i])
+            var prom=parseInt(sum)/parseInt(num.length);
+    
+            if (num[i] % 2 == 0) {
+                par++;
+            } else
+                impar++;
+            var i = i + 1;
+        }
+    
+        console.log(par);
+        document.getElementById('ver').innerHTML = result;
+        document.getElementById('cant').innerHTML = "<tr><td>" + num.length + "</td></tr>";
+        document.getElementById('suma').innerHTML = "<tr><td>" + sum + "</td></tr>";
+        document.getElementById('prom').innerHTML = "<tr><td>" + prom + "</td></tr>";
+    }
+
+
+
+
+
+
+
+
+        </script>
+
+
+    </center>
+</body>
+</html>
