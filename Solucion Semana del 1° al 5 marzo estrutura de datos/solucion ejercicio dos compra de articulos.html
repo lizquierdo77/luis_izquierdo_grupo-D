@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>solucion de ejercicio ventas</title>
+    <style>
+        body{
+            background-color: bisque;
+            color: black;
+            font-size: 20px;
+            font-style: italic;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>GESTÓN DE VENTAS DE ARTICULOS</h1>
+        <br>
+        <table border="5">
+            <th>Descripción</th><th>Valor</th>
+            <tbody>
+                <tr><td>Nombre Artículo</td>
+                    <td><input type="text" name="art" id="art" autofocus></td>
+                </tr>
+                <tr>
+                    <td>Unidades de Medida</td>
+                    <td>
+                        <select name="und" id="und">
+                            <option value=0>Metros</option>
+                            <option value=1>Unidades</option>
+                            <option value=2>Centimetros</option>
+                            <option value=3>Bulto de 50Kg</option>
+                            <option value=4>Kilogramos</option>
+                            <option value=5>Caja x 10</option>
+                            <option value=6>Libras</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cantidad Vendida</td>
+                    <td><input type="text" name="cant" id="cant"></td>
+                </tr>
+                <tr>
+                    <td>Precio de Compra</td>
+                    <td><input type="text" name="pc" id="pc"></td>
+                </tr>
+                <tr>
+                    <td>Precio Venta Público</td>
+                    <td><input type="text" name="pv" id="pv"></td>
+                </tr>
+            </tbody>
+        </table>
+        <table border="5">
+            <tr><td><button onclick="registrarVenta()">REGISTRAR VENTA</button></td></tr>
+        </table>
+        <br>
+        <h3>Listado de Artíulos vendidos</h3>
+        <br>
+        <table border="5">
+            <th>Nombre Artículo</th><th>Unidades</th><th>Cantidad Vendida</th><th>Precio Compra</th><th>Precio Venta</th><th>Total Venta</th>
+            <th>Ganancias por producto</th> <tbody id="cuerpo"></tbody>
+        </table>
+    </center>
+
+   <center> <table>
+        <tfoot>
+            <tr>
+                <th>GRAN TOTAL VENTA</th>
+                <th id="otrocuerpo"></th>
+            </tr>
+        </tfoot>
+    </table></center>
+
+    <script>
+        var salida='';
+        var objArticulo={
+            art : null,
+            und : null,
+            cant : null,
+            pc : null,
+            pv : null
+        }
+      
+
+        function registrarVenta(){
+            objArticulo.art=document.getElementById('art').value;
+            objArticulo.und=document.getElementById('und').value;
+            objArticulo.cant=document.getElementById('cant').value;
+            objArticulo.pc=document.getElementById('pc').value;
+            objArticulo.pv=document.getElementById('pv').value;
+
+            var totalVenta= ttv(objArticulo.pv,objArticulo.cant );
+            var operaciones=gananciaproducto (totalVenta,  objArticulo.pc);
+
+            salida+='<tr><td >'+objArticulo.art+'</td><td>'+convUnd(objArticulo.und)+'</td><td>'+objArticulo.cant+'</td><td>'+objArticulo.pc+'  </td><td>'+objArticulo.pv+'</td> <td  >'+totalVenta+'</td>   <td name= "operacion">'+operaciones+' </td> </tr>';
+            document.getElementById('cuerpo').innerHTML= salida;
+            limpiarCajas();
+           
+            calcular_total();
+        
+        
+
+        }
+
+        function calcular_total(){
+    
+    var subtotales = document.getElementsByName('operacion');
+    var total = document.getElementById('otrocuerpo');
+
+    var suma = 0;
+
+    for (var index = 0; index < subtotales.length; index++) {
+        suma = suma + Number(subtotales[index].innerText)
+        
+    }
+
+    total.innerText = ""+suma;
+}
+
+   
+
+
+
+        function limpiarCajas(){
+            document.getElementById('art').value='';
+            document.getElementById('cant').value='';
+            document.getElementById('pc').value='';
+            document.getElementById('pv').value='';
+            document.getElementById('art').focus();
+        }
+
+        function ttv (pv,cant){
+            return (pv*cant); }
+
+
+        
+        function gananciaproducto(totalVenta, pc){
+            return (totalVenta - pc); }
+
+    
+
+        function convUnd(und){
+            var undMed='';
+            und=parseInt(und);
+            switch(und){
+                case 0: undMed ="Metros"; break;
+                case 1: undMed ="Unidades"; break;
+                case 2: undMed ="Centimetros"; break;
+                case 3: undMed ="Bulto de 50Kg"; break;
+                case 4: undMed ="Kilogramos"; break;
+                case 5: undMed ="Caja x 10"; break;
+                case 6: undMed ="Libras"; break;
+            }
+            return undMed;
+
+
+
+        }
+    </script>
+</body>
+</html>
