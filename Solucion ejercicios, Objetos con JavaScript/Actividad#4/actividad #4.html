@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>actividad #4</title>
+
+    <style>
+ body{
+            background-color: rgb(167, 167, 242);
+            color: black;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: oblique;
+        }
+        
+    </style>
+</head>
+<body>
+    <center>
+    <h1>VENTA</h1>
+
+    <form action="index.html" method="post">
+        <table border="2">
+            <tr>
+                <td><label for="">NOMBRE DEL ARTICULO</label></td>
+                <td> <input id="articulo" type="text" name="articulo" value="" autofocus></td>
+            </tr>
+            <tr>
+                <td><label for="">PRECIO DE VENTA UNITARIO</label></td>
+                <td><input id="precio" type="number" name="precio" value=""></td>
+            </tr>
+            <tr>
+                <td><label for="">CANTIDAD DE ARTICULOS VENDIDOS</label></td>
+                <td><input id="cantidad" type="number" name="cantidad" value=""></td>
+            </tr>
+        </table>
+        
+                <br>
+                <table>
+                <td colspan="2">
+                    <button  type="button" name="button" onclick="agregar_producto()">GUARDAR</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    
+    <h1>SALIDA DE DATOS</h1>
+    <table border="3">
+        <thead>
+            <tr>
+                <th>ARTICULO</th><th>PRECIO DE VENTA</th><th>CANTIDAD</th><th>TOTAL</th>
+            </tr>
+        </thead>
+        <tbody id="tabla_productos">
+
+        </tbody>
+      </table>
+
+      
+      <table>
+        <tfoot>
+            <tr>
+                <th>GRAN TOTAL</th>
+                <th id="total"></th>
+            </tr>
+        </tfoot>
+    </table>
+</center>
+    <script src="js 4.js" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>actividad #2</title>
+    <script src="eje2.js" charset="utf-8"></script>
+    <style>
+        body{
+            background-color: rgb(111, 111, 111);
+            color: black;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: oblique;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1></h1>
+
+        <br>
+        <table border="5">
+          <center><h2>Datos personales</h2></center> 
+            <tbody>
+                <tr>
+                    <td>Nombres</td>
+                    <td>
+                        <input type="text"  name="nom" id="nom" placeholder="Digite Nombres" autofocus >
+                    </td>
+                </tr>
+                <tr>
+                    <td>Apellidos</td>
+                    <td>
+                        <input type="text"  name="ape" id="ape"placeholder="Digite Apellidos" >
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cédula</td>
+                    <td>
+                        <input type="text"  name="ced" id="ced" placeholder="Digite Cédula" >
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>Edad</td>
+                    <td>
+                        <input type="text"  name="eda" id="eda" placeholder="Digite Edad" >
+                    </td>
+                </tr>
+            </tbody>
+            <table border="5">
+                <tr>
+                    <td>
+                         <button onclick="guardar()">GUARDAR</button>
+                    </td>
+                </tr>
+            </table>
+        </table>
+        <br>
+        <h2>LISTADO DE DATOS</h2>
+        <table border="5">
+            <th>Nombres</th> <th>Apellidos</th> <th>Cédula</th> <th>Edad</th> <tbody id="cuerpo"> </tbody>
+        </table>
+        <br >
+        <table border="2">
+            <td>Nuevo Nombre</td>
+            <td><input type="text" id="can" name="can" placeholder="Digite Nuevo Nombre"></td>
+            <td><button onclick="remplazar()">MODIFICAR</button></td>
+        </table>
+
+    </center>
+
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACTIVIDAD #3</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ 
+    <style>
+      body{
+          background-color: rgb(152, 151, 208);
+          color: black;
+          font-size: 20px;
+          font-family: Arial, Helvetica, sans-serif;
+          font-style: oblique;
+      }
+
+
+
+
+    <style>
+       .margen{
+         margin-right: 10px;
+        }
+      
+      .mtop{
+        margin-top: 12px;
+      }
+      
+    </style>
+    
+  </head>
+<body>
+   <center><div class="container">
+  <div class="card  text-center" style="width: 40rem;">
+    
+    <div class="card-body">
+      <br>
+      <br>
+      <h2 class="card-title">   CAPTURA DATOS  DE PERSONAS    </h2>
+      
+      <div class="row">
+        <div class="col-md-4">
+            Nombre
+        </div>
+        <div class="col-md-4">
+          <input id="nombre" type="text">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+            Apellido
+        </div>
+        <div class="col-md-4">
+          <input id="apellido" type="text">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+            Cedula
+        </div>
+        <div class="col-md-4">
+          <input id="cedula" type="text">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+            Edad
+        </div>
+        <div class="col-md-4">
+          <input id="edad" type="number">
+
+          
+          
+        </div>
+      </div>
+      
+    </div>
+    <div class="mtop card-footer">
+      <button class="btn btn-primary" id="b_guardar" onclick="guardar()">Guardar</button>
+      <button class="btn btn-primary" id="b_editar"  onclick="proce_editar()">Editar</button>
+    </div>
+  </div> 
+
+
+<hr>
+
+<div id="salida"></div>
+</div>
+
+</center>
+<script src="eje3.js"></script>
+
+</body>
+</html>
